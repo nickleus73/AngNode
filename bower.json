@@ -1,0 +1,16 @@
+{
+  "name": "AngNode",
+  "version": "0.0.1",
+  "homepage": "https://github.com/nickleus73/AngNode",
+  "authors": [
+    "Nickleus73 <moricet.nicolas@free.fr>"
+  ],
+  "description": "ngNode is a CMS based on some javascript technologies like nodejs or angularjs",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT"
+}

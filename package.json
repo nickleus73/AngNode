@@ -1,0 +1,24 @@
+{
+  "name": "AngNode",
+  "version": "0.0.1",
+  "description": "ngNode is a CMS based on some javascript technologies like nodejs or angularjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nickleus73/AngNode.git"
+  },
+  "keywords": [
+    "angularjs",
+    "nodejs",
+    "javascript",
+    "cms"
+  ],
+  "author": "MORICET Nicolas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nickleus73/AngNode/issues"
+  }
+}
