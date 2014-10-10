@@ -12,5 +12,10 @@
   "keywords": [
     "angularjs"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.2.26",
+    "angular-route": "~1.2.26",
+    "angular-mocks": "~1.2.26"
+  }
 }
