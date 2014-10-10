@@ -28,3 +28,5 @@ module.exports = (grunt) ->
                     }] 
                     
     grunt.registerTask 'default', ['flo']
+    
+    grunt.registerTask 'force', ['copy']
