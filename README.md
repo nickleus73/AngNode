@@ -16,17 +16,3 @@ TODO : write more...
 Clone the project in your work directory. Then launch the command line :
 
 `vagrant up`
-
-Meanwhile, open new terminal and launch these commands lines
-
-For install npm dependencies :
-
-`npm install`
-
-For install grunt dependencies :
-
-`bower install`
-
-Then you can launch this command line :
-
-`grunt force`
