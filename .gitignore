@@ -4,3 +4,5 @@
 /dev/public/assets/lib/angular
 /dev/public/assets/lib/angular-*
 /dev/public/assets/dist/
+/npm-debug.log
+/.vagrant/

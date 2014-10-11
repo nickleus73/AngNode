@@ -1,0 +1,2 @@
+ATTENTION: default value of option force_s3tc_enable overridden by environment.
+[1011/190434:ERROR:sandbox_linux.cc(130)] InitializeSandbox() called with multiple threads in process gpu-process
