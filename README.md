@@ -33,6 +33,6 @@ Then run this command :
 
 `cd /var/www/html`
 
-After, if you have execute npm and bower command, you can make it.
+After, if you have execute npm and bower commands, you can make it.
 
 
