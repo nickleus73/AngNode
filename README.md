@@ -19,9 +19,9 @@ Clone the project in your work directory. Then launch the command line :
 
 meanwhile and if you have intalled node, npm and bower, you can execute some commands in your work directory :
 
-`npm install` to install dependencies
+`npm install` to install node dependencies
 
-`bower install` to install componants
+`bower install` to install bower componants
 
 if you haven't install node, npm and bower, don't worry, you can execute these command when you are connected to you vistual machine.
 
