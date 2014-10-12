@@ -17,13 +17,13 @@ Clone the project in your work directory. Then launch the command line :
 
 `vagrant up`
 
-meanwhile and if you have intalled node, npm and bower, you can execute some commands in your work directory :
+Meanwhile and if you have intalled node, npm and bower, you can execute some commands in your work directory :
 
 `npm install` to install node dependencies
 
 `bower install` to install bower componants
 
-if you haven't install node, npm and bower, don't worry, you can execute these command when you are connected to you vistual machine.
+If you haven't installed node, npm and bower, don't worry, you can execute these command when you are connected to your vistual machine.
 
 So when the command `vagrant up` is finished, you can you to connect to vagrant with this command :
 
