@@ -7,6 +7,7 @@ module.exports = (grunt) ->
                 options: 
                     bare: true
                 files: {
+                    'server.js': 'dev/server.coffee'
                     'dev/public/assets/dist/modules/config.js': 'dev/public/assets/app/modules/config.coffee'
                 }
             tests:
@@ -37,7 +38,7 @@ module.exports = (grunt) ->
         flo:
             serve:
                 options:
-                    port: 9999
+                    port: 8000
                     dir: './'
                     glob: []
                     resolvers: [{
@@ -49,6 +50,7 @@ module.exports = (grunt) ->
                             reload: true
                     }, {
                         files: [
+                            'dev/*.coffee',
                             'dev/public/assets/app/modules/*.coffee',
                             'dev/var/test-public/modules/*.coffee'
                         ]
