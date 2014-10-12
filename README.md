@@ -25,7 +25,7 @@ meanwhile and if you have intalled node, npm and bower, you can execute some com
 
 if you haven't install node, npm and bower, don't worry, you can execute these command when you are connected to you vistual machine.
 
-So when the command `vagrant up` is finished, you can you connect to vagrant whith this command :
+So when the command `vagrant up` is finished, you can you to connect to vagrant with this command :
 
 `vagrant ssh`
 
