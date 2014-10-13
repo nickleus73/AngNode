@@ -23,6 +23,6 @@ To access to your project directory, run this command:
 
 `cd /var/www/html`
 
-To run the server, run the next command:
+To run the server, execute this next command:
 
 `npm start`
