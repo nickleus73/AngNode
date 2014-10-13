@@ -5,34 +5,24 @@ AngNode is a CMS based on some javascript technologies like nodejs or angularjs
 
 ##Prerequis##
 
-You need install virtualbox and vagrant. Then add the plugin vagrant-omnibus with this command line : 
+You need install virtualbox and vagrant.
 
-`vagrant plugin install vagrant-omnibus`
-
-TODO : write more...
+This project, is tested on the version 4.3.10 of virtualbox and the version 1.6.3 of vagrant. 
 
 ##Installation##
 
-Clone the project in your work directory. Then launch the command line :
+Clone the project in your work directory. Then you have just to launch the next command line:
 
 `vagrant up`
 
-Meanwhile and if you have intalled node, npm and bower, you can execute some commands in your work directory :
-
-`npm install` to install node dependencies
-
-`bower install` to install bower componants
-
-If you haven't installed node, npm and bower, don't worry, you can execute these command when you are connected to your vistual machine.
-
-So when the command `vagrant up` is finished, you can you to connect to vagrant with this command :
+So when the command `vagrant up` is finished, you can you to connect to vagrant with this command:
 
 `vagrant ssh`
 
-Then run this command :
+To access to your project directory, run this command:
 
 `cd /var/www/html`
 
-After, if you have execute npm and bower command, you can make it.
+To run the server, run the next command:
 
-
+`npm start`

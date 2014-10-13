@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |v|
     v.customize [
       "modifyvm", :id,
-      "--memory", "3072",
+      "--memory", "512",
       "--cpus", 1,
       "--cpuexecutioncap", "75"
     ]
@@ -19,10 +19,9 @@ Vagrant.configure(2) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "chef/ubuntu-14.04"
+  config.vm.box = "precise64v2"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
   
-  config.omnibus.chef_version = 11.16
-
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -98,11 +97,17 @@ Vagrant.configure(2) do |config|
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #
+  
   config.vm.provision "chef_solo" do |chef|
+  # chef.privileged = false
     chef.cookbooks_path = "data/cookbooks"
+    chef.add_recipe "apt"
+    chef.add_recipe "git"
     chef.add_recipe "mongodb"
+    chef.add_recipe "main::vagrant"
     chef.add_recipe "nodejs"
     chef.add_recipe "main"
+    chef.log_level = :debug
   #   chef.roles_path = "../my-recipes/roles"
   #   chef.data_bags_path = "../my-recipes/data_bags"
   #   chef.add_recipe "mysql"
@@ -111,7 +116,7 @@ Vagrant.configure(2) do |config|
   #   # You may also specify custom JSON attributes:
   #   chef.json = { mysql_password: "foo" }
   end
-
+  
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
   #
