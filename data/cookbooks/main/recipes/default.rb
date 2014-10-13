@@ -30,7 +30,12 @@ execute "Install bower" do
     user "root"
 end
 
-execute "Install dependancies" do
-    command "cd /var/www/html/node_modules/angnode-server/ && npm install && cd ../.. && npm install"
+execute "Install dependancies and compile the module angnode-server" do
+    command "cd /var/www/html/node_modules/angnode-server/ && npm install && grunt force"
+    user "root"
+end
+
+execute "Install dependancies and compile project" do
+    command "cd /var/www/html/ && npm install && grunt force"
     user "root"
 end
