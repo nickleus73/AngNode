@@ -7,19 +7,19 @@ AngNode is a CMS based on some javascript technologies like nodejs or angularjs
 
 You need install virtualbox and vagrant.
 
-TODO : write more...
+This project, is tested on the version 4.3.10 of virtualbox and the version 1.6.3 of vagrant. 
 
 ##Installation##
 
-Clone the project in your work directory. Then launch the command line :
+Clone the project in your work directory. Then you have just to launch the next command line:
 
 `vagrant up`
 
-So when the command `vagrant up` is finished, you can you to connect to vagrant with this command :
+So when the command `vagrant up` is finished, you can you to connect to vagrant with this command:
 
 `vagrant ssh`
 
-Then run this command to access to your project directory :
+To access to your project directory, run this command:
 
 `cd /var/www/html`
 
