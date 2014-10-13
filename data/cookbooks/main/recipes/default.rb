@@ -1,16 +1,23 @@
 execute "Install git" do
-    command "sudo apt-get -y install git"
+    command "apt-get update"
     user "root"
 end
 
-execute "Clone andnode-server" do
-    if File.directory?('./angnode-server')
-        command "cd /var/www/html/node_modules && sudo rm -R angnode-server && git clone https://github.com/nickleus73/angnode-server.git && cd .."
-        user "root"
-    else
-        command "cd /var/www/html/node_modules && git clone https://github.com/nickleus73/angnode-server.git && cd .."
-        user "root"
+execute "Install git" do
+    command "apt-get -y install git"
+    user "root"
+end
+
+execute "Clean node_modules" do
+    if File.directory?('/var/www/html/node_modules')
+        command "cd /var/www/html/ && rm -R node_modules && mkdir node_modules"
+        user "vagrant"
     end
+end
+
+execute "Clone andnode-server" do
+    command "cd /var/www/html/node_modules && git clone https://github.com/nickleus73/angnode-server.git && cd .."
+    user "vagrant"
 end
 
 execute "Install coffeescript" do
@@ -26,4 +33,9 @@ end
 execute "Install bower" do
     command "npm install -g bower"
     user "root"
+end
+
+execute "Install dependancies" do
+    command "cd /var/www/html/node_modules/angnode-server/ && npm install"
+    user "vagrant"
 end

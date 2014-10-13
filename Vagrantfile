@@ -114,8 +114,6 @@ Vagrant.configure(2) do |config|
   #   chef.json = { mysql_password: "foo" }
   end
   
-  #config.vm.provision :shell, :inline => 'cd /var/www/html/node_modules/angnode-server/ && sudo npm install', :privileged => false
-  
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
   #
