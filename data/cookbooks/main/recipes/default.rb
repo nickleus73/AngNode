@@ -3,21 +3,16 @@ execute "Install git" do
     user "root"
 end
 
-execute "Install git" do
-    command "apt-get -y install git"
-    user "root"
-end
-
 execute "Clean node_modules" do
     if File.directory?('/var/www/html/node_modules')
         command "cd /var/www/html/ && rm -R node_modules && mkdir node_modules"
-        user "vagrant"
+        user "root"
     end
 end
 
 execute "Clone andnode-server" do
     command "cd /var/www/html/node_modules && git clone https://github.com/nickleus73/angnode-server.git && cd .."
-    user "vagrant"
+    user "root"
 end
 
 execute "Install coffeescript" do
@@ -36,6 +31,6 @@ execute "Install bower" do
 end
 
 execute "Install dependancies" do
-    command "cd /var/www/html/node_modules/angnode-server/ && npm install"
-    user "vagrant"
+    command "cd /var/www/html/node_modules/angnode-server/ && npm install && cd ../.. && npm install"
+    user "root"
 end
