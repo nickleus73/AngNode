@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |v|
     v.customize [
       "modifyvm", :id,
-      "--memory", "3072",
+      "--memory", "512",
       "--cpus", 1,
       "--cpuexecutioncap", "75"
     ]
@@ -98,7 +98,9 @@ Vagrant.configure(2) do |config|
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #
+  
   config.vm.provision "chef_solo" do |chef|
+  # chef.privileged = false
     chef.cookbooks_path = "data/cookbooks"
     chef.add_recipe "mongodb"
     chef.add_recipe "nodejs"
@@ -111,7 +113,9 @@ Vagrant.configure(2) do |config|
   #   # You may also specify custom JSON attributes:
   #   chef.json = { mysql_password: "foo" }
   end
-
+  
+  #config.vm.provision :shell, :inline => 'cd /var/www/html/node_modules/angnode-server/ && sudo npm install', :privileged => false
+  
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
   #
