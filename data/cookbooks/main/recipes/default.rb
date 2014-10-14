@@ -18,6 +18,11 @@ execute "Clone andnode-server" do
     user "root"
 end
 
+execute "Install vows" do
+    command "npm install -g vows"
+    user "root"
+end
+
 execute "Install coffeescript" do
     command "npm install -g coffee-script"
     user "root"
