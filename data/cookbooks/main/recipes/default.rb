@@ -1,8 +1,3 @@
-execute "Apt-get update" do
-    command "apt-get update"
-    user "root"
-end
-
 execute "Clean node_modules" do
     if File.directory?('/var/www/html/node_modules')
         command "cd /var/www/html/ && rm -R node_modules && mkdir node_modules"
@@ -20,6 +15,11 @@ end
 
 execute "Install vows" do
     command "npm install -g vows"
+    user "root"
+end
+
+execute "Install forever" do
+    command "npm install -g forever"
     user "root"
 end
 
@@ -45,5 +45,10 @@ end
 
 execute "Install dependancies and compile project" do
     command "cd /var/www/html/ && npm install && grunt force"
+    user "root"
+end
+
+execute "Run the server" do
+    command "forever start -l forever.log server.js"
     user "root"
 end
