@@ -49,6 +49,6 @@ execute "Install dependancies and compile project" do
 end
 
 execute "Run the server" do
-    command "forever start -l forever.log server.js"
+    command "forever start -l forever.log /var/www/html/server.js"
     user "root"
 end
