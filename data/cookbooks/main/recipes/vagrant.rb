@@ -22,3 +22,8 @@ execute "Install build-essential" do
     command "apt-get install -y build-essential"
     user "root"
 end
+
+execute "Apt-get update" do
+    command "apt-get update"
+    user "root"
+end
