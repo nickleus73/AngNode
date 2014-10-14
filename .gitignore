@@ -8,3 +8,4 @@
 /.vagrant/
 *.out
 *.log
+/server.js
