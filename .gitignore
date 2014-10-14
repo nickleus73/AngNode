@@ -6,4 +6,5 @@
 /dev/public/assets/dist/
 /npm-debug.log
 /.vagrant/
-/nohup.out
+*.out
+*.log
