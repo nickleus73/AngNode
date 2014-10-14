@@ -1,4 +1,4 @@
-execute "Install git" do
+execute "Apt-get update" do
     command "apt-get update"
     user "root"
 end
@@ -6,6 +6,9 @@ end
 execute "Clean node_modules" do
     if File.directory?('/var/www/html/node_modules')
         command "cd /var/www/html/ && rm -R node_modules && mkdir node_modules"
+        user "root"
+    else
+        command "cd /var/www/html/ && mkdir node_modules"
         user "root"
     end
 end
