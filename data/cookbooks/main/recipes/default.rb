@@ -47,8 +47,3 @@ execute "Install dependancies and compile project" do
     command "cd /var/www/html/ && npm install && grunt force"
     user "root"
 end
-
-execute "Run the server" do
-    command "forever start -l forever.log /var/www/html/server.js"
-    user "root"
-end
