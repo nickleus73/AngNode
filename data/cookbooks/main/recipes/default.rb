@@ -44,6 +44,6 @@ execute "Install dependancies and compile the module angnode-server" do
 end
 
 execute "Install dependancies and compile project" do
-    command "cd /var/www/html/ && npm install && grunt force"
+    command "cd /var/www/html/ && rm -rf ~/.npm && npm cache clean && npm install && grunt force"
     user "root"
 end
