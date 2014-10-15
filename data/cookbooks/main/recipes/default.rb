@@ -43,6 +43,11 @@ execute "Install dependancies and compile the module angnode-server" do
     user "root"
 end
 
+execute "Clear npm cache" do
+    command "rm -rf ~/.npm && npm cache clean"
+    user "root"
+end
+
 execute "Install dependancies and compile project" do
     command "cd /var/www/html/ && npm install && grunt force"
     user "root"
