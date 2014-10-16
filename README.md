@@ -14,3 +14,9 @@ This project, is tested on the version 4.3.10 of virtualbox and the version 1.6.
 ##Dependencies##
 
 AndNode Server : https://github.com/nickleus73/angnode-server
+
+##Contributors##
+
+If you want to contribute and if it's possible, please, add units tests. It's easier for us, to validate your pull request and and it accelerates the validation.
+
+The contributions with units tests will be priority.
