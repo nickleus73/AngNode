@@ -9,6 +9,8 @@ module.exports = (grunt) ->
                 files: {
                     'server.js': 'dev/server.coffee'
                     'dev/public/assets/dist/modules/config.js': 'dev/public/assets/app/modules/config.coffee'
+                    'api/controllers/api.js': 'dev/api/controllers/api.coffee'
+                    'api/models/user.js': 'dev/api/models/user.coffee'
                 }
             tests:
                 options:
@@ -51,6 +53,7 @@ module.exports = (grunt) ->
                     }, {
                         files: [
                             'dev/*.coffee',
+                            'dev/api/**/*.coffee',
                             'dev/public/assets/app/modules/*.coffee',
                             'dev/var/test-public/modules/*.coffee'
                         ]
