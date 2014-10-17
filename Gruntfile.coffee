@@ -22,7 +22,7 @@ module.exports = (grunt) ->
             dist:
                 files: [
                     { expand: true, flatten: true, filter: 'isFile', src: 'dev/public/*.html', dest: 'public/' }
-                    { expand: true, flatten: true, filter: 'isFile', src: 'dev/var/data/*.json', dest: 'var/data/' }
+                    { expand: true, flatten: true, filter: 'isFile', src: 'dev/data/configs/*.json', dest: 'data/configs/' }
                 ]
         concat:
             options:
