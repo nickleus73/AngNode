@@ -10,3 +10,4 @@
 *.log
 /server.js
 /nbproject/
+/api/

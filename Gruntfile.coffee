@@ -11,6 +11,7 @@ module.exports = (grunt) ->
                     'dev/public/assets/dist/modules/config.js': 'dev/public/assets/app/modules/config.coffee'
                     'api/controllers/api.js': 'dev/api/controllers/api.coffee'
                     'api/models/user.js': 'dev/api/models/user.coffee'
+                    'data/fixtures/fictitious/fixture.js': 'dev/data/fixtures/fictitious/fixture.coffee'
                 }
             tests:
                 options:
