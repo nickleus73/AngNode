@@ -10,6 +10,7 @@ module.exports = (grunt) ->
                     'server.js': 'dev/server.coffee'
                     'dev/public/assets/dist/modules/config.js': 'dev/public/assets/app/modules/config.coffee'
                     'api/controllers/api.js': 'dev/api/controllers/api.coffee'
+                    'api/controllers/content.js': 'dev/api/controllers/content.coffee'
                     'api/models/user.js': 'dev/api/models/user.coffee'
                     'data/fixtures/fictitious/fixture.js': 'dev/data/fixtures/fictitious/fixture.coffee'
                     'data/configs/bootstrapper.js': 'dev/data/configs/bootstrapper.coffee'
@@ -39,6 +40,10 @@ module.exports = (grunt) ->
                     'dev/public/assets/dist/modules/config.js'
                 ]
                 dest: 'public/assets/lib/app.js'
+        less:
+            dist:
+                files:
+                    'public/assets/css/styles.css': 'dev/public/assets/less/styles.less'
         flo:
             serve:
                 options:
@@ -70,8 +75,15 @@ module.exports = (grunt) ->
                         tasks: ['coffee:*']
                         callback:
                             reload: true
+                    }, {
+                        files: [
+                            'dev/public/assets/less/*.less'
+                        ]
+                        tasks: ['less:*']
+                        callback:
+                            reload: true
                     }] 
 
     grunt.registerTask 'default', ['flo']
     
-    grunt.registerTask 'force', ['coffee', 'concat', 'copy']
+    grunt.registerTask 'force', ['coffee', 'concat', 'copy', 'less']
