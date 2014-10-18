@@ -8,6 +8,7 @@ module.exports = (grunt) ->
                     bare: true
                 files: {
                     'server.js': 'dev/server.coffee'
+                    'dev/public/assets/dist/app.js': 'dev/public/assets/app/app.coffee'
                     'dev/public/assets/dist/modules/config.js': 'dev/public/assets/app/modules/config.coffee'
                     'api/controllers/api.js': 'dev/api/controllers/api.coffee'
                     'api/controllers/content.js': 'dev/api/controllers/content.coffee'
@@ -37,6 +38,7 @@ module.exports = (grunt) ->
                 dest: 'public/assets/lib/lib.js'
             app:
                 src: [
+                    'dev/public/assets/dist/app.js'
                     'dev/public/assets/dist/modules/config.js'
                 ]
                 dest: 'public/assets/lib/app.js'
@@ -62,6 +64,7 @@ module.exports = (grunt) ->
                             'dev/*.coffee',
                             'dev/api/**/*.coffee',
                             'dev/data/**/**/*.coffee',
+                            'dev/public/assets/app/*.coffee',
                             'dev/public/assets/app/modules/*.coffee',
                             'dev/var/test-public/modules/*.coffee'
                         ]
@@ -70,9 +73,10 @@ module.exports = (grunt) ->
                             reload: true
                     }, {
                         files: [
+                            'dev/public/assets/dist/**/*.js',
                             'dev/public/assets/lib/**/*.js'
                         ]
-                        tasks: ['coffee:*']
+                        tasks: ['concat:*']
                         callback:
                             reload: true
                     }, {
