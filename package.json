@@ -34,7 +34,8 @@
     "karma-firefox-launcher": "~0.1.3",
     "karma-jasmine": "~0.1.5",
     "minimatch": "~1.0.0",
-    "angnode-server": "nickleus73/angnode-server#master"
+    "angnode-server": "nickleus73/angnode-server#master",
+    "grunt-contrib-less": "~0.11.4"
   },
   "dependencies": {
     "mongoose": "~3.8.17",
