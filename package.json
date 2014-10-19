@@ -4,7 +4,7 @@
   "description": "ngNode is a CMS based on some javascript technologies like nodejs or angularjs",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node data/tests/index.js",
     "start": "node server.js"
   },
   "repository": {
@@ -35,11 +35,15 @@
     "karma-jasmine": "~0.1.5",
     "minimatch": "~1.0.0",
     "angnode-server": "nickleus73/angnode-server#master",
-    "grunt-contrib-less": "~0.11.4"
+    "grunt-contrib-less": "~0.11.4",
+    "request": "~2.45.0",
+    "underscore": "~1.7.0"
   },
   "dependencies": {
     "mongoose": "~3.8.17",
     "winston": "~0.8.1",
-    "lorem-ipsum": "~1.0.1"
+    "lorem-ipsum": "~1.0.1",
+    "body-parser": "~1.9.0",
+    "bcrypt-nodejs": "0.0.3"
   }
 }
