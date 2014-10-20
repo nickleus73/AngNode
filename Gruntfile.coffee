@@ -9,6 +9,7 @@ module.exports = (grunt) ->
                 files: {
                     'server.js': 'dev/server.coffee'
                     'dev/public/assets/dist/app.js': 'dev/public/assets/app/app.coffee'
+                    'dev/public/assets/dist/admin.js': 'dev/public/assets/app/admin.coffee'
                     'dev/public/assets/dist/modules/config.js': 'dev/public/assets/app/modules/config.coffee'
                     'api/controllers/api.js': 'dev/api/controllers/api.coffee'
                     'api/controllers/content.js': 'dev/api/controllers/content.coffee'
@@ -42,6 +43,11 @@ module.exports = (grunt) ->
                     'dev/public/assets/dist/modules/config.js'
                 ]
                 dest: 'public/assets/lib/app.js'
+            admin:
+                src: [
+                    'dev/public/assets/dist/admin.js'
+                ]
+                dest: 'public/assets/lib/admin.js'
         less:
             dist:
                 files:
