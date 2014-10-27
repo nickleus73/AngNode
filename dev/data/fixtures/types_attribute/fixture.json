@@ -1,0 +1,25 @@
+{
+    "user": [
+        {
+            "name": "firstname",
+            "canonical_name": "firstname",
+            "label": "firstname"
+        },
+        {
+            "name": "lastname",
+            "canonical_name": "lastname",
+            "label": "lastname"
+        },
+        {
+            "name": "email",
+            "canonical_name": "email",
+            "label": "email",
+            "required": true
+        },
+        {
+            "name": "password",
+            "canonical_name": "password",
+            "label": "password"
+        }
+    ]
+}
