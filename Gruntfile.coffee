@@ -13,8 +13,10 @@ module.exports = (grunt) ->
                     'api/controllers/api.js': 'dev/api/controllers/api.coffee'
                     'api/controllers/content.js': 'dev/api/controllers/content.coffee'
                     'api/controllers/user.js': 'dev/api/controllers/user.coffee'
-                    'api/models/user.js': 'dev/api/models/user.coffee'
+                    'api/models/eav/type.js': 'dev/api/models/eav/type.coffee'
+                    'api/models/eav/attribute.js': 'dev/api/models/eav/attribute.coffee'
                     'data/fixtures/fictitious/fixture.js': 'dev/data/fixtures/fictitious/fixture.coffee'
+                    'data/fixtures/types_attribute/fixture.js': 'dev/data/fixtures/types_attribute/fixture.coffee'
                     'data/configs/bootstrapper.js': 'dev/data/configs/bootstrapper.coffee'
                 }
             tests:
@@ -22,15 +24,17 @@ module.exports = (grunt) ->
                     bare: true
                 files:
                     'data/tests/index.js': 'dev/data/tests/index.coffee'
-                    'data/tests/api/controllers/user.js': 'dev/data/tests/api/controllers/user.coffee'
                     'data/tests/tools/util.js': 'dev/data/tests/tools/util.coffee'
                     'var/test-public/modules/config.js': 'dev/var/test-public/modules/config.coffee'
+                    'data/tests/api/models/eav/type.js': 'dev/data/tests/api/models/eav/type.coffee'
+                    'data/tests/api/models/eav/attribute.js': 'dev/data/tests/api/models/eav/attribute.coffee'
         copy:
             dist:
                 files: [
                     { expand: true, flatten: true, filter: 'isFile', src: 'dev/public/*.html', dest: 'public/' }
                     { expand: true, flatten: true, filter: 'isFile', src: 'dev/data/tests/*.json', dest: 'data/tests/' }
                     { expand: true, flatten: true, filter: 'isFile', src: 'dev/data/configs/*.json', dest: 'data/configs/' }
+                    { expand: true, flatten: true, filter: 'isFile', src: 'dev/data/fixtures/types_attribute/*.json', dest: 'data/fixtures/types_attribute/' }
                 ]
         concat:
             options:
@@ -100,3 +104,5 @@ module.exports = (grunt) ->
     grunt.registerTask 'default', ['flo']
     
     grunt.registerTask 'force', ['coffee', 'concat', 'copy', 'less']
+    
+    grunt.registerTask 'compile', ['coffee', 'concat']
