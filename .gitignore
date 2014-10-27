@@ -10,6 +10,11 @@
 *.log
 /server.js
 /nbproject/
+/data/tests/
+/data/configs/
+/data/fixtures/
 /api/
 /dev/public/assets/lib/bootstrap/
 /dev/public/assets/lib/jquery/
+/dev/data/tests/api/controller-back/
+/dev/api/models/back/
